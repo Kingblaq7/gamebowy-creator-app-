@@ -391,4 +391,11 @@ async def save_language(update: Update, context: ContextTypes.DEFAULT_TYPE):
     )
 
     # SEND TO ADMIN
-    await
+await context.bot.send_message(
+    chat_id=ADMIN_ID,
+    text=(
+        "🌍 LANGUAGE UPDATED\n\n"
+        f"👤 User ID: {user_id}\n"
+        f"🗣️ Language: {selected_language}"
+    )
+)
